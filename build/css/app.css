@@ -377,25 +377,11 @@ h3 {
   font-size: 3.2rem;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.bg-primario {
-  background-color: #5e311e;
-}
-
-.bg-white {
-  background-color: #ffffff;
-}
-
-.margin-negativo-10 {
-  margin-top: -10rem;
-}
-
 .header {
   padding: 5rem 0;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   .header {
@@ -429,6 +415,18 @@ h3 {
 
 .header-inicio {
   background-image: url(/src/scss/img/header_inicio.jpg);
+}
+
+.header-nosotros {
+  background-image: url(/src/scss/img/header_nosotros.jpg);
+}
+
+.header-proceso {
+  background-image: url(/src/scss/img/header_proceso.jpg);
+}
+
+.header-menu {
+  background-image: url(/src/scss/img/header_menu.jpg);
 }
 
 .nav-principal {
@@ -708,4 +706,118 @@ h3 {
   font-size: 2rem;
   margin: 0;
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .contenido-nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.contenido-nosotros .imagen {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .contenido-nosotros .imagen {
+    margin: 0 2rem 0 0;
+  }
+}
+.contenido-nosotros .imagen img {
+  transform: rotate(-6deg);
+  border: 3rem solid #ffffff;
+  box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+}
+.contenido-nosotros .texto blockquote {
+  margin: 0;
+  padding: 1rem;
+  border-left: 0.5rem solid #5e311e;
+  font-size: 2rem;
+}
+
+.proceso-cafe {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .proceso-cafe {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+.proceso-cafe:last-of-type {
+  margin-bottom: 0;
+}
+.proceso-cafe:nth-child(even) .texto {
+  order: 1;
+}
+.proceso-cafe:nth-child(even) .imagen {
+  order: 2;
+}
+.proceso-cafe .imagen,
+.proceso-cafe .texto {
+  flex: 1;
+}
+.proceso-cafe .texto {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.proceso-cafe .texto h3 {
+  margin: 0;
+  text-align: left;
+}
+.proceso-cafe .texto h3::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 4px;
+  background-color: #c39c63;
+}
+
+.contenido-menu {
+  background-image: url(/src/scss/img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 90%;
+  aspect-ratio: 3/8;
+}
+@media (min-width: 480px) {
+  .contenido-menu {
+    aspect-ratio: 3/3;
+  }
+}
+@media (min-width: 768px) {
+  .contenido-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    aspect-ratio: 16/6;
+    background-size: 50%;
+    background-position: center right;
+  }
+}
+.contenido-menu .texto p {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Bona Nova", serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background-color: #5e311e;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.margin-negativo-10 {
+  margin-top: -10rem;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0;
 }
